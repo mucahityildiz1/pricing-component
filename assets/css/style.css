@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(/assets/img/mobile-bg.png);
+  background-repeat: no-repeat;
+  background-color: #f0f3fa;
+  background-position: top right;
+  background-size: auto;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+.header {
+  padding: 64px 68px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39.01px;
+  color: #6e728e;
+  margin-bottom: 40px;
+}
+.header input {
+  width: 56px;
+}
+.header span {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #6e728e;
+  opacity: 50%;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.items {
+  padding: 0 24px;
+  padding-bottom: 32px;
+}
+.item {
+  background-color: #fff;
+  padding: 29px 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+.item h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-decoration-skip-ink: none;
+  color: #6e728e;
+  margin-bottom: 24px;
+}
+.item h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48.76px;
+  letter-spacing: -1.2000000476837158px;
+  color: #4A4D60;
+}
+.item span {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -2.1600000858306885px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  color: #4a4d60;
+}
+.item-details {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.item-details p {
+  padding: 12px 62px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-decoration-skip-ink: none;
+  color: #6e728e;
+  border-bottom: 1px solid #6e728e;
+}
+.item button:hover {
+  background: #fff;
+  border: 1px solid #6D72DE;
+  color: #6D72DE;
+}
+.item-details p:first-child {
+  border-top: 1px solid #6e728e;
+}
+.btn-hover:hover {
+  background-color: #fff;
+}
+.item button {
+  padding: 14px 80px;
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.85px;
+  letter-spacing: 1.3928571939468384px;
+}
+.item:nth-child(2) {
+  background: linear-gradient(135deg, #a2a7f0 0.06%, #696edd 100.06%);
+}
+.item:nth-child(2) h2 {
+  color: #fff;
+}
+.item:nth-child(2) h3 {
+  color: #fff;
+}
+.item:nth-child(2) span {
+  color: #fff;
+}
+.item:nth-child(2) p {
+  color: #fff;
+}
+.item-details:nth-child(1) button:hover {
+  background-color: #fff;
+}
+.item:nth-child(2) button {
+  background: #ffffff;
+  color: #6d72de;
+}
+.item:nth-child(2) button:hover {
+  background: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  color: #fff;
+  border: 1px solid #fff;
+}
+@media (width > 376px) {
+  body {
+    background-image: url(/assets/img/desktop-img.png);
+    background-color: #f0f3fa;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .item:nth-child(2) {
+    height: 501px;
+  }
+}
